@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サポート - ブラックジャック トレーニング</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #1a6b3c;
+      --green-light: #2d8f55;
+      --gold: #c9a84c;
+      --felt: #0f4a28;
+      --dark: #0a0a0a;
+      --card: #1a1a1a;
+      --text: #e8e0d0;
+      --text-muted: #8a8070;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--dark);
+      color: var(--text);
+      font-family: 'Noto Sans JP', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background: linear-gradient(180deg, #000 0%, var(--felt) 100%);
+      padding: 48px 24px 40px;
+      text-align: center;
+      border-bottom: 2px solid var(--gold);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '♠ ♥ ♦ ♣';
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      letter-spacing: 16px;
+      color: var(--gold);
+      opacity: 0.5;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 5vw, 38px);
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 640px;
+      padding: 40px 20px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .card h2 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .card p, .card li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #b0a898;
+    }
+
+    .card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card ul li::before {
+      content: '→ ';
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .contact-btn {
+      display: block;
+      margin-top: 20px;
+      padding: 14px 28px;
+      background: transparent;
+      border: 1.5px solid var(--gold);
+      border-radius: 8px;
+      color: var(--gold);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .contact-btn:hover {
+      background: var(--gold);
+      color: var(--dark);
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 12px;
+      border-top: 1px solid #1a1a1a;
+      width: 100%;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ブラックジャック トレーニング</h1>
+    <p>サポートページ / Support</p>
+  </header>
+
+  <main>
+
+    <div class="card">
+      <h2>よくある質問 / FAQ</h2>
+      <ul>
+        <li>このアプリはリアルマネーを使用しません。練習用のチップのみです。</li>
+        <li>チップ残高はデバイス内にのみ保存されます。</li>
+        <li>アプリを削除すると、データはリセットされます。</li>
+        <li>This app does not use real money. Practice chips only.</li>
+        <li>Chip balance is stored locally on your device only.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>お問い合わせ / Contact</h2>
+      <p>ご不明な点やご意見は、下記のメールアドレスまでお気軽にお問い合わせください。<br><br>For questions or feedback, please contact us by email.</p>
+      <a class="contact-btn" href="mailto:support@example.com">support@example.com</a>
+    </div>
+
+    <div class="card">
+      <h2>プライバシーポリシー / Privacy Policy</h2>
+      <p>このアプリは個人情報を収集・保存・共有しません。すべてのデータはデバイス内にのみ保存されます。<br><br>This app does not collect, store, or share any personal data. All data is stored locally on your device only.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 RYO7077 &nbsp;|&nbsp; <a href="https://ryo7077.github.io/blackjack-privacy/">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
